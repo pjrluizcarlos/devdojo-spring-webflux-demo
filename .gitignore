@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-/requests
+/requests/**
 
 ### STS ###
 .apt_generated

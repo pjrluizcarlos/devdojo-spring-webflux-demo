@@ -1,6 +1,0 @@
-PUT
-http://localhost:8080/animes
-@Content-Type: application/json
-{"id": 1, "name": "Dr Stone"}
-%%%
-# Error: Entity may not be null
