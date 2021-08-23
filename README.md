@@ -20,6 +20,10 @@ CREATE TABLE if not exists anime.anime (
 );
 ```
 
+### OpenAPI Access
+
+Running application, access http://localhost:8080/swagger-ui.html
+
 ### Pending topics
 - Database migration
 
