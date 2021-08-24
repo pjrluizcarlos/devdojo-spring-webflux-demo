@@ -5,6 +5,7 @@ import br.com.luizcarlospjr.devdojospringwebfluxdemo.service.AnimeService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,15 +38,21 @@ public class AnimeController {
         return service.create(anime);
     }
 
-    @PutMapping
+    @PutMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public Mono<Void> update(@Valid @RequestBody Anime anime) {
-        return service.update(anime);
+    public Mono<Void> update(@PathVariable("id") Integer id, @Valid @RequestBody Anime anime) {
+        return service.update(anime.withId(id));
     }
 
     @GetMapping("{id}")
     public Mono<Anime> findById(@PathVariable("id") Integer id) {
         return service.findById(id);
+    }
+
+    @DeleteMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public Mono<Void> deleteById(@PathVariable("id") Integer id) {
+        return service.deleteById(id);
     }
 
 }
