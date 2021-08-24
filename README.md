@@ -1,5 +1,10 @@
 # Getting Started
 
+### Based on
+
+Youtube channel: [Devdojo](https://www.youtube.com/c/DevDojoBrasil)  
+Playlist: [Spring WebFlux Essentials - APIs Reativas e escaláveis com Spring WebFlux](https://www.youtube.com/playlist?list=PL62G310vn6nH5Tgcp5q2a1xCb6CsZJAi7)
+
 ### To run  
 - Run needed infra (Postgres SQL) with docker-compose 
     - `docker-compose -f ./docker-compose.yml up -d`
