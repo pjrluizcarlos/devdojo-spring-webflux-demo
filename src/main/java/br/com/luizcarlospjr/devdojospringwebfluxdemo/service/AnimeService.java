@@ -38,8 +38,7 @@ public class AnimeService {
 
     public Mono<Void> deleteById(Integer id) {
         return findById(id)
-                .map(Anime::getId)
-                .flatMap(repository::deleteById);
+                .flatMap(repository::delete);
     }
 
     private <T> Mono<T> monoResponseStatusNotFoundException() {
