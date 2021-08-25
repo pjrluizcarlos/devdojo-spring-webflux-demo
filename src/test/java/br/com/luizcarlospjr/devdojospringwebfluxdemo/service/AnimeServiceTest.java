@@ -3,7 +3,6 @@ package br.com.luizcarlospjr.devdojospringwebfluxdemo.service;
 import br.com.luizcarlospjr.devdojospringwebfluxdemo.WebfluxTest;
 import br.com.luizcarlospjr.devdojospringwebfluxdemo.data.Anime;
 import br.com.luizcarlospjr.devdojospringwebfluxdemo.data.AnimeRepository;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,7 +19,6 @@ import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
-@Slf4j
 class AnimeServiceTest extends WebfluxTest {
 
     private static final Integer ID = 1;
